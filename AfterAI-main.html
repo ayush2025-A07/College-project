@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f6f2">
+    <title>Student ERP | RiverMont College of Technology</title>
+    <link rel="stylesheet" href="college-portal.css">
+    <script src="college-portal.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="topbar">
+        <a class="brand" href="#overview" aria-label="RiverMont College of Technology ERP home">
+            <span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="Images/ChatGPT%20Image%20Sep%2026,%202026,%2003_16_03%20PM.png" alt=""></span>
+            <span class="brand-copy"><strong class="brand-name">Student ERP</strong><span class="brand-subtitle">Academic Portal</span></span>
+        </a>
+        <form class="global-search" role="search" autocomplete="off">
+            <label class="visually-hidden" for="global-search">Search the portal</label>
+            <span aria-hidden="true">⌕</span>
+            <input id="global-search" type="search" placeholder="Search courses, notices, resources...">
+            <div class="search-results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
+        </form>
+        <div class="top-actions">
+            <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle color theme"><span aria-hidden="true">◐</span></button>
+            <div class="notification-wrap">
+                <button class="icon-button notification-button" id="notification-toggle" type="button" aria-expanded="false" aria-controls="notification-panel" aria-label="Notifications, 3 unread"><span aria-hidden="true">♧</span><span class="notification-count">3</span></button>
+                <section class="notification-panel" id="notification-panel" aria-labelledby="notification-heading" hidden>
+                    <div class="popover-heading"><h2 id="notification-heading">Notifications</h2><button class="text-button" id="mark-read" type="button">Mark all read</button></div>
+                    <ul class="notification-list" id="notification-list">
+                        <li><span class="notification-dot"></span><div><strong>Assignment due soon</strong><p>Web Programming project · Tomorrow</p></div></li>
+                        <li><span class="notification-dot"></span><div><strong>Attendance update</strong><p>Microcontroller is below 75%</p></div></li>
+                        <li><span class="notification-dot"></span><div><strong>Exam schedule published</strong><p>Check the academic calendar</p></div></li>
+                    </ul>
+                </section>
+            </div>
+            <button class="user-chip" id="profile-open" type="button" aria-label="Edit Rahul Sharma profile"><img src="Images/man-avatar-free-vector.jpg" alt="" width="34" height="34"><span>Rahul Sharma</span><span class="user-chevron" aria-hidden="true">⌄</span></button>
+            <a class="button button-outline signout-link" href="login.html">Sign out</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="side-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <aside class="sidebar" id="side-nav">
+            <p class="sidebar-label">Workspace</p>
+            <nav class="side-links" aria-label="Dashboard sections">
+                <a class="side-link is-active" href="AfterAI-main.html"><span aria-hidden="true">⌂</span>Overview</a>
+                <a class="side-link" href="attendance.html"><span aria-hidden="true">◷</span>Attendance</a>
+                <a class="side-link" href="courses.html"><span aria-hidden="true">▤</span>Courses &amp; timetable</a>
+                <a class="side-link" href="assignments.html"><span aria-hidden="true">▧</span>Assignments <span class="side-count">3</span></a>
+                <a class="side-link" href="results.html"><span aria-hidden="true">▥</span>Marks &amp; results</a>
+                <a class="side-link" href="materials.html"><span aria-hidden="true">▱</span>Study materials</a>
+                <a class="side-link" href="fees.html"><span aria-hidden="true">₹</span>Fees</a>
+                <a class="side-link" href="academic-calendar.html"><span aria-hidden="true">▦</span>Academic calendar</a>
+                <a class="side-link" href="campus-support.html"><span aria-hidden="true">⌖</span>Campus &amp; support</a>
+                <a class="side-link" href="profile.html"><span aria-hidden="true">◉</span>Student profile</a>
+            </nav>
+            <div class="sidebar-bottom"><span class="college-monogram">RMCT</span><div><strong>Academic year</strong><span>2026-2027</span></div></div>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <section class="welcome-row" id="overview" aria-labelledby="welcome-title">
+                <div><p class="eyebrow">Saturday, September 26, 2026 <span class="live-dot" aria-hidden="true"></span></p><h1 id="welcome-title">Good morning, Rahul</h1><p class="page-intro">Here’s your academic snapshot for today.</p></div>
+                <div class="welcome-actions">
+                    <label class="role-preview">Preview role
+                        <select id="role-select" aria-label="Preview dashboard role">
+                            <option value="student">Student</option>
+                            <option value="faculty">Faculty</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </label>
+                    <button class="button button-outline" id="print-page" type="button"><span aria-hidden="true">⤓</span> Print dashboard</button>
+                </div>
+            </section>
+
+            <section class="role-view" id="faculty-view" aria-live="polite" hidden>
+                <div class="role-banner"><div><p class="eyebrow">Faculty preview</p><h2>Teaching workspace</h2><p>Sample tools for attendance, coursework and student progress.</p></div><span class="role-tag">Demo role</span></div>
+                <div class="role-tools"><article><span class="tool-number">01</span><h3>Take attendance</h3><p>CS302 · Web Programming<br>Today, 10:30 AM</p><a href="#courses">Open class list <span aria-hidden="true">→</span></a></article><article><span class="tool-number">02</span><h3>Marks entry</h3><p>One assessment awaiting marks entry.</p><a href="#results">Review assessments <span aria-hidden="true">→</span></a></article><article><span class="tool-number">03</span><h3>Student progress</h3><p>Review attendance and submitted work.</p><a href="#attendance">View class summary <span aria-hidden="true">→</span></a></article></div>
+            </section>
+            <section class="role-view" id="admin-view" aria-live="polite" hidden>
+                <div class="role-banner"><div><p class="eyebrow">Admin preview</p><h2>College operations</h2><p>Sample overview of records, fees and academic reporting.</p></div><span class="role-tag">Demo role</span></div>
+                <div class="role-tools"><article><span class="tool-number">01</span><h3>Student records</h3><p>Enrollment and course information.</p><a href="#profile">Open student record <span aria-hidden="true">→</span></a></article><article><span class="tool-number">02</span><h3>Fee overview</h3><p>Fee status and due-date tracking.</p><a href="#fees">Review fee status <span aria-hidden="true">→</span></a></article><article><span class="tool-number">03</span><h3>Academic reports</h3><p>Attendance and result snapshots.</p><a href="#results">View reports <span aria-hidden="true">→</span></a></article></div>
+            </section>
+
+            <section class="metric-grid" aria-label="Academic summary">
+                <article class="metric-card metric-attendance"><div class="metric-top"><span>Attendance</span><span class="metric-icon" aria-hidden="true">◷</span></div><strong>86<span>%</span></strong><div class="metric-foot"><span class="trend-up">On track</span><span>Overall this semester</span></div><div class="metric-track"><span style="width: 86%"></span></div></article>
+                <article class="metric-card metric-cgpa"><div class="metric-top"><span>Current CGPA</span><span class="metric-icon" aria-hidden="true">✳</span></div><strong>8.4<span class="metric-unit">/ 10</span></strong><div class="metric-foot"><span>Semester 3</span><a href="#results">View results</a></div><div class="metric-track"><span style="width: 84%"></span></div></article>
+                <article class="metric-card metric-assignments"><div class="metric-top"><span>Pending work</span><span class="metric-icon" aria-hidden="true">▧</span></div><strong>3<span class="metric-unit">tasks</span></strong><div class="metric-foot"><span class="due-soon">1 due tomorrow</span><a href="#assignments">View assignments</a></div><div class="metric-track"><span style="width: 62%"></span></div></article>
+                <article class="metric-card metric-fees"><div class="metric-top"><span>Fee status</span><span class="metric-icon" aria-hidden="true">₹</span></div><strong class="metric-word">Part paid</strong><div class="metric-foot"><span>₹12,500 due</span><a href="#fees">Fee details</a></div><div class="metric-track"><span style="width: 72%"></span></div></article>
+            </section>
+
+            <div class="dashboard-grid">
+                <section class="surface-panel today-panel" aria-labelledby="today-heading">
+                    <div class="panel-heading"><div><p class="eyebrow">Saturday · September 26</p><h2 id="today-heading">Today’s classes</h2></div><a class="quiet-link" href="#courses">Full timetable <span aria-hidden="true">→</span></a></div>
+                    <ol class="class-list">
+                        <li class="class-item"><time datetime="08:30">08:30</time><span class="class-rail rail-green"></span><div><h3>Web Development</h3><p>CS302 · Dr. Anjali Mehta</p></div><span class="class-room">Room 204</span></li>
+                        <li class="class-item"><time datetime="10:30">10:30</time><span class="class-rail rail-gold"></span><div><h3>Mathematics III</h3><p>MA301 · Prof. S. Iyer</p></div><span class="class-room">Room 108</span></li>
+                        <li class="class-item"><time datetime="13:30">13:30</time><span class="class-rail rail-blue"></span><div><h3>Database Systems</h3><p>CS303 · Prof. N. Rao</p></div><span class="class-room">Lab 2</span></li>
+                    </ol>
+                    <div class="class-footnote"><span class="status-dot" aria-hidden="true"></span>Next class begins at 08:30 AM</div>
+                </section>
+
+                <section class="surface-panel notice-panel" aria-labelledby="notice-heading">
+                    <div class="panel-heading"><div><p class="eyebrow">From your college</p><h2 id="notice-heading">Announcements</h2></div><span class="notice-total">3 new</span></div>
+                    <ul class="notice-list">
+                        <li><span class="notice-marker marker-green">EX</span><div><span class="notice-meta">Examinations · 2 hours ago</span><h3><a href="#calendar">Semester exam schedule released</a></h3><p>View dates and reporting instructions.</p></div></li>
+                        <li><span class="notice-marker marker-gold">CL</span><div><span class="notice-meta">Campus · Yesterday</span><h3><a href="#campus">Holiday notice: Gandhi Jayanti</a></h3><p>College will remain closed on October 2.</p></div></li>
+                        <li><span class="notice-marker marker-blue">LB</span><div><span class="notice-meta">Library · Sep 23</span><h3><a href="#resources">Library hours extended</a></h3><p>Reading room open until 8 PM this week.</p></div></li>
+                    </ul>
+                </section>
+
+                <section class="surface-panel upcoming-panel" aria-labelledby="upcoming-heading">
+                    <div class="panel-heading"><div><p class="eyebrow">Keep on your radar</p><h2 id="upcoming-heading">Upcoming</h2></div><a class="quiet-link" href="#calendar">Calendar <span aria-hidden="true">→</span></a></div>
+                    <ul class="upcoming-list">
+                        <li><time datetime="2026-09-27"><span>SEP</span><strong>27</strong></time><div><h3>Web Programming assignment</h3><p>Submission deadline · 11:59 PM</p></div><span class="deadline-pill">Tomorrow</span></li>
+                        <li><time datetime="2026-09-30"><span>SEP</span><strong>30</strong></time><div><h3>Database Systems internal</h3><p>Exam · 10:00 AM, Hall B</p></div></li>
+                        <li><time datetime="2026-10-05"><span>OCT</span><strong>05</strong></time><div><h3>TechNova college event</h3><p>Innovation showcase · Main quad</p></div></li>
+                    </ul>
+                </section>
+
+                <section class="surface-panel attendance-snapshot" aria-labelledby="attendance-snapshot-heading">
+                    <div class="panel-heading"><div><p class="eyebrow">Semester 3</p><h2 id="attendance-snapshot-heading">Attendance check</h2></div><a class="quiet-link" href="#attendance">Details <span aria-hidden="true">→</span></a></div>
+                    <div class="attendance-summary"><strong>86%</strong><span>overall attendance<br><b>Target: 75%</b></span><span class="attendance-positive">Good standing</span></div>
+                    <div class="attendance-mini-list"><div><span>Web Programming</span><span>91%</span><span class="mini-track"><i style="width: 91%"></i></span></div><div><span>Mathematics III</span><span>84%</span><span class="mini-track"><i style="width: 84%"></i></span></div><div class="attendance-low"><span>Microcontroller</span><span>68%</span><span class="mini-track"><i style="width: 68%"></i></span></div></div>
+                    <p class="warning-note"><span aria-hidden="true">!</span> Microcontroller is below the 75% attendance target.</p>
+                </section>
+            </div>
+
+            <section class="content-section" id="attendance" aria-labelledby="attendance-heading">
+                <div class="section-heading"><div><p class="eyebrow">Monthly history</p><h2 id="attendance-heading">Attendance</h2></div><span class="section-aside">September 2026 · 18 class days</span></div>
+                <div class="surface-panel attendance-detail-panel">
+                    <div class="attendance-detail-top"><div><strong>86%</strong><span>semester attendance</span></div><p>Monthly attendance trend</p><div class="month-bars" aria-label="Monthly attendance: July 82 percent, August 89 percent, September 86 percent"><span><i style="height: 62%"></i><small>Jul</small></span><span><i style="height: 78%"></i><small>Aug</small></span><span class="bar-current"><i style="height: 70%"></i><small>Sep</small></span><span class="bar-future"><i style="height: 25%"></i><small>Oct</small></span></div></div>
+                    <div class="table-frame"><table class="data-table"><caption class="visually-hidden">Subject-wise attendance for semester 3</caption><thead><tr><th>Subject</th><th>Classes held</th><th>Attended</th><th>Attendance</th><th>Standing</th></tr></thead><tbody><tr><td>Web Programming</td><td>22</td><td>20</td><td>91%</td><td><span class="table-status status-good">On track</span></td></tr><tr><td>Mathematics III</td><td>25</td><td>21</td><td>84%</td><td><span class="table-status status-good">On track</span></td></tr><tr><td>Database Systems</td><td>21</td><td>18</td><td>86%</td><td><span class="table-status status-good">On track</span></td></tr><tr><td>Microcontroller</td><td>22</td><td>15</td><td>68%</td><td><span class="table-status status-warning">Needs attention</span></td></tr></tbody></table></div>
+                </div>
+            </section>
+
+            <section class="content-section" id="courses" aria-labelledby="courses-heading">
+                <div class="section-heading"><div><p class="eyebrow">Your semester</p><h2 id="courses-heading">Courses &amp; timetable</h2></div><span class="section-aside">5 enrolled subjects · 18 credits</span></div>
+                <div class="surface-panel">
+                    <div class="table-frame"><table class="data-table"><caption class="visually-hidden">Enrolled courses with faculty, credits and weekly schedule</caption><thead><tr><th>Course</th><th>Faculty</th><th>Credits</th><th>Class schedule</th></tr></thead><tbody><tr><td><strong>CS301</strong> Data Structures using Python</td><td>Prof. N. Rao</td><td>4</td><td>Mon, Wed · 09:30</td></tr><tr><td><strong>CS302</strong> Web Programming</td><td>Dr. Anjali Mehta</td><td>4</td><td>Tue, Sat · 08:30</td></tr><tr><td><strong>CS303</strong> Database Systems</td><td>Prof. N. Rao</td><td>4</td><td>Mon, Sat · 13:30</td></tr><tr><td><strong>CS304</strong> Object Oriented Programming</td><td>Dr. K. Patel</td><td>3</td><td>Wed, Fri · 11:30</td></tr><tr><td><strong>CS305</strong> Microcontroller</td><td>Prof. S. Iyer</td><td>3</td><td>Tue, Thu · 14:30</td></tr></tbody></table></div>
+                </div>
+            </section>
+
+            <section class="content-section" id="assignments" aria-labelledby="assignments-heading">
+                <div class="section-heading"><div><p class="eyebrow">Coursework</p><h2 id="assignments-heading">Assignments</h2></div><div class="filter-tabs" role="group" aria-label="Filter assignments"><button class="filter-tab is-selected" type="button" data-assignment-filter="all" aria-pressed="true">All <span>4</span></button><button class="filter-tab" type="button" data-assignment-filter="pending" aria-pressed="false">Pending <span>3</span></button><button class="filter-tab" type="button" data-assignment-filter="completed" aria-pressed="false">Completed <span>1</span></button></div></div>
+                <div class="surface-panel"><div class="table-frame"><table class="data-table assignment-table"><caption class="visually-hidden">Assignments and submission status</caption><thead><tr><th>Assignment</th><th>Course</th><th>Due date</th><th>Status</th><th>Action</th></tr></thead><tbody>
+                    <tr data-assignment data-status="pending"><td><strong>Responsive portfolio site</strong></td><td>CS302 · Web Programming</td><td>Sep 27, 2026</td><td><span class="table-status status-warning">Due tomorrow</span></td><td><button class="small-action submit-assignment" type="button">Mark submitted</button></td></tr>
+                    <tr data-assignment data-status="pending"><td><strong>SQL query workbook</strong></td><td>CS303 · Database Systems</td><td>Sep 29, 2026</td><td><span class="table-status status-neutral">In progress</span></td><td><button class="small-action submit-assignment" type="button">Mark submitted</button></td></tr>
+                    <tr data-assignment data-status="pending"><td><strong>Linked list implementation</strong></td><td>CS301 · Data Structures</td><td>Oct 03, 2026</td><td><span class="table-status status-neutral">In progress</span></td><td><button class="small-action submit-assignment" type="button">Mark submitted</button></td></tr>
+                    <tr data-assignment data-status="completed"><td><strong>OOP class design</strong></td><td>CS304 · Object Oriented Programming</td><td>Sep 20, 2026</td><td><span class="table-status status-good">Submitted</span></td><td><span class="muted-copy">Received</span></td></tr>
+                </tbody></table></div></div>
+            </section>
+
+            <section class="content-section" id="results" aria-labelledby="results-heading">
+                <div class="section-heading"><div><p class="eyebrow">Academic record</p><h2 id="results-heading">Marks &amp; results</h2></div><span class="section-aside">Semester 3 · Internal assessment</span></div>
+                <div class="surface-panel"><div class="result-summary"><div><span>Current CGPA</span><strong>8.4 <small>/ 10</small></strong></div><div><span>Credits completed</span><strong>42 <small>credits</small></strong></div><div><span>Semester average</span><strong>72% <small>of 100</small></strong></div></div><div class="table-frame"><table class="data-table"><caption class="visually-hidden">Internal, assignment and exam marks with grades</caption><thead><tr><th>Subject</th><th>Internal</th><th>Assignments</th><th>Exam</th><th>Total</th><th>Grade</th><th>Status</th></tr></thead><tbody><tr><td>CS301 · Data Structures using Python</td><td>18 / 20</td><td>17 / 20</td><td>43 / 60</td><td>78</td><td>A</td><td><span class="table-status status-good">Pass</span></td></tr><tr><td>CS302 · Web Programming</td><td>16 / 20</td><td>18 / 20</td><td>31 / 60</td><td>65</td><td>B+</td><td><span class="table-status status-good">Pass</span></td></tr><tr><td>CS303 · Python Programming</td><td>19 / 20</td><td>18 / 20</td><td>45 / 60</td><td>82</td><td>A+</td><td><span class="table-status status-good">Pass</span></td></tr><tr><td>CS304 · Object Oriented Programming using C++</td><td>15 / 20</td><td>17 / 20</td><td>39 / 60</td><td>71</td><td>A</td><td><span class="table-status status-good">Pass</span></td></tr><tr><td>CS305 · Microcontroller</td><td>14 / 20</td><td>16 / 20</td><td>34 / 60</td><td>64</td><td>B+</td><td><span class="table-status status-good">Pass</span></td></tr></tbody></table></div></div>
+            </section>
+
+            <section class="content-section" id="resources" aria-labelledby="resources-heading">
+                <div class="section-heading"><div><p class="eyebrow">Course library</p><h2 id="resources-heading">Study materials</h2></div><span class="section-aside">Recently added</span></div>
+                <div class="resource-grid"><article class="resource-item"><span class="file-type file-pdf">PDF</span><div><h3>Database normalization notes</h3><p>CS303 · Prof. N. Rao · Sep 24</p></div><span class="resource-meta">2.4 MB</span></article><article class="resource-item"><span class="file-type file-link">LINK</span><div><h3>Python data structures guide</h3><p>CS301 · Course reading</p></div><span class="resource-meta">Reading</span></article><article class="resource-item"><span class="file-type file-pdf">PDF</span><div><h3>Web programming lecture 06</h3><p>CS302 · Dr. Anjali Mehta · Sep 22</p></div><span class="resource-meta">1.8 MB</span></article></div>
+            </section>
+
+            <section class="content-section" id="fees" aria-labelledby="fees-heading">
+                <div class="section-heading"><div><p class="eyebrow">Account summary</p><h2 id="fees-heading">Fees</h2></div><span class="section-aside">Academic year 2026-2027</span></div>
+                <div class="surface-panel fee-panel"><div class="fee-overview"><div><span>Total semester fees</span><strong>₹45,000</strong></div><div><span>Paid to date</span><strong>₹32,500</strong></div><div><span>Balance due</span><strong class="fee-due">₹12,500</strong></div><button class="button button-primary" id="payment-details" type="button">Payment details</button></div><div class="fee-history"><h3>Recent payment</h3><div><span><strong>Tuition installment</strong><small>Receipt GEC-26-1048 · Sep 02, 2026</small></span><span>₹20,000 <b class="table-status status-good">Paid</b></span></div><p class="muted-copy">Next installment due October 15, 2026. Online payment is not connected in this demo.</p></div></div>
+            </section>
+
+            <section class="content-section" id="calendar" aria-labelledby="calendar-heading">
+                <div class="section-heading"><div><p class="eyebrow">Important dates</p><h2 id="calendar-heading">Academic calendar</h2></div><span class="section-aside">Upcoming events</span></div>
+                <div class="calendar-grid"><article><time datetime="2026-09-27"><span>SEP</span><strong>27</strong></time><div><span class="event-kind kind-academic">Assignment</span><h3>Web Programming project due</h3><p>11:59 PM · Submit via course portal</p></div></article><article><time datetime="2026-09-30"><span>SEP</span><strong>30</strong></time><div><span class="event-kind kind-exam">Examination</span><h3>Database Systems internal</h3><p>10:00 AM · Examination Hall B</p></div></article><article><time datetime="2026-10-02"><span>OCT</span><strong>02</strong></time><div><span class="event-kind kind-holiday">Holiday</span><h3>Gandhi Jayanti</h3><p>College closed</p></div></article><article><time datetime="2026-10-05"><span>OCT</span><strong>05</strong></time><div><span class="event-kind kind-event">Campus event</span><h3>TechNova innovation showcase</h3><p>10:00 AM · Main quad</p></div></article></div>
+            </section>
+
+            <section class="content-section" id="campus" aria-labelledby="campus-heading">
+                <div class="section-heading"><div><p class="eyebrow">Beyond the classroom</p><h2 id="campus-heading">Campus &amp; support</h2></div><span class="section-aside">Student services</span></div>
+                <div class="campus-grid">
+                    <article class="surface-panel campus-panel"><p class="eyebrow">Messages</p><h3>Faculty communication</h3><div class="message-preview"><span class="faculty-avatar">AM</span><div><strong>Dr. Anjali Mehta</strong><p>Project consultation hours are available Tuesday afternoon.</p><small>CS302 · Sep 25</small></div></div><form id="message-form" class="compact-form"><label for="message-text">Send a message</label><div><input id="message-text" name="message" type="text" maxlength="180" placeholder="Write a quick message..." required><button class="button button-primary" type="submit">Send</button></div><p class="form-feedback" id="message-feedback" aria-live="polite"></p></form></article>
+                    <article class="surface-panel campus-panel"><p class="eyebrow">Student life</p><h3>Events &amp; clubs</h3><ul class="simple-list"><li><span class="list-marker marker-gold">TN</span><span><strong>TechNova 2026</strong><small>Innovation showcase · Oct 05</small></span><span class="table-status status-neutral">Event</span></li><li><span class="list-marker marker-green">RC</span><span><strong>Robotics Club meetup</strong><small>Friday · 4:00 PM · Lab 3</small></span><span class="table-status status-neutral">Club</span></li></ul></article>
+                    <article class="surface-panel campus-panel"><p class="eyebrow">Getting around</p><h3>Transport &amp; facilities</h3><div class="service-row"><span>Campus shuttle</span><strong>Route 2 · 8:00 AM, 4:30 PM</strong></div><div class="service-row"><span>Hostel dining</span><strong>Breakfast 7-9 · Dinner 7-9 PM</strong></div><div class="service-row"><span>Canteen</span><strong>Open today until 6:00 PM</strong></div></article>
+                    <article class="surface-panel campus-panel"><p class="eyebrow">Documents</p><h3>Certificates &amp; records</h3><ul class="document-list"><li><span class="file-type file-pdf">PDF</span><span><strong>Semester 2 grade card</strong><small>Issued Jun 14, 2026</small></span><span class="table-status status-good">Available</span></li><li><span class="file-type file-doc">DOC</span><span><strong>Enrollment certificate</strong><small>Request through student office</small></span><span class="table-status status-neutral">Request</span></li></ul></article>
+                    <article class="surface-panel campus-panel help-panel"><p class="eyebrow">Help desk</p><h3>Need assistance?</h3><p>Send a support request to the student services office.</p><form id="support-form" class="compact-form"><label for="support-topic">Request topic</label><div><input id="support-topic" name="topic" type="text" maxlength="100" placeholder="Briefly describe the issue" required><button class="button button-outline" type="submit">Request help</button></div><p class="form-feedback" id="support-feedback" aria-live="polite"></p></form></article>
+                </div>
+            </section>
+
+            <section class="content-section profile-record" id="profile" aria-labelledby="profile-heading">
+                <div class="section-heading"><div><p class="eyebrow">Account information</p><h2 id="profile-heading">Student profile</h2></div><button class="text-button" id="profile-edit" type="button">Edit profile</button></div>
+                <div class="surface-panel profile-panel"><div class="student-identity"><img class="student-photo" src="Images/man-avatar-free-vector.jpg" alt="Portrait of Rahul Sharma" width="160" height="190"><div><h3>Rahul Sharma</h3><p>Computer Science &amp; Engineering</p><span class="student-term">3rd Semester · Enrolled</span></div></div><dl class="profile-details"><div class="detail-item"><dt>Enrollment number</dt><dd>2026CS101</dd></div><div class="detail-item"><dt>Course</dt><dd>B.Tech Computer Science</dd></div><div class="detail-item"><dt>Semester</dt><dd>3rd Semester</dd></div><div class="detail-item"><dt>Academic email</dt><dd><a href="mailto:rahul.sharma@gec.ac.in">rahul.sharma@gec.ac.in</a></dd></div></dl></div>
+            </section>
+            <footer class="page-footer"><span>RiverMont College of Technology · Student ERP</span><span>Demo data · Academic year 2026-2027</span></footer>
+        </main>
+    </div>
+
+    <dialog class="app-dialog" id="profile-dialog" aria-labelledby="profile-dialog-title"><form method="dialog" class="dialog-close-form"><button class="icon-button" aria-label="Close profile editor">×</button></form><p class="eyebrow">Account settings</p><h2 id="profile-dialog-title">Edit profile</h2><form id="profile-form" class="dialog-form"><label for="edit-name">Full name</label><input id="edit-name" name="name" value="Rahul Sharma" required><label for="edit-email">Academic email</label><input id="edit-email" name="email" type="email" value="rahul.sharma@gec.ac.in" required><p class="form-feedback" id="profile-feedback" aria-live="polite"></p><button class="button button-primary" type="submit">Save changes</button></form></dialog>
+    <dialog class="app-dialog" id="payment-dialog" aria-labelledby="payment-dialog-title"><form method="dialog" class="dialog-close-form"><button class="icon-button" aria-label="Close payment details">×</button></form><p class="eyebrow">Fee account</p><h2 id="payment-dialog-title">Payment details</h2><p>₹12,500 is due by October 15, 2026. Online payment is not connected in this front-end demo. Contact the accounts office to arrange payment.</p><button class="button button-primary dialog-dismiss" type="button">Close</button></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+1.Prompt used in the project:
+
+You are an expert frontend developer specializing in HTML, CSS, and vanilla JavaScript.
+
+I have a basic HTML website that works but looks plain. Improve its visual design by adding modern CSS and simple JavaScript interactions while preserving its original functionality and purpose.
+
+### Tasks
+
+1. Analyze my existing HTML and understand its structure and functionality.
+2. Improve the design with:
+
+   * Modern typography, colors, spacing, and layout
+   * Clean cards/containers, buttons, forms, borders, and shadows
+   * Hover, focus, and subtle transition effects
+   * Responsive design for desktop, tablet, and mobile
+   * Flexbox/Grid where appropriate
+3. Add basic vanilla JavaScript only where useful, such as:
+
+   * Form validation
+   * Button interactions
+   * Show/hide elements
+   * Menus, modals, or simple dynamic feedback
+4. Preserve all existing functionality. Do not unnecessarily rewrite the HTML.
+5. Keep the code beginner-friendly and use only HTML, CSS, and vanilla JavaScript. No frameworks unless requested.
+6. Maintain good accessibility, semantic HTML, readable code, and consistent visual styling.
+7. Avoid excessive animations, gradients, or unnecessary complexity.
+
+### Output
+
+**1. Design Improvements** — Briefly list what you improved.
+
+**2. Improved HTML** — Complete final HTML.
+
+**3. CSS** — Complete CSS.
+
+**4. JavaScript** — Complete JavaScript.
+
+**5. Changes Explained** — Brief beginner-friendly explanation.
+
+If the original HTML has technical issues, mention them separately before changing them.
+
+I will now provide my existing HTML code. Analyze it and create the improved version.
+
+
+2.Prompt for adding addiotnal functions required in student erp
+
+For a **Student ERP**, I’d add these features to make the project feel much more complete:
+
+### Core Features
+
+* 👤 **Student Profile** — personal details, enrollment number, course, semester
+* 📚 **Subjects & Courses** — subjects, credits, faculty, timetable
+* 📝 **Attendance** — subject-wise attendance %, monthly history, low-attendance warning
+* 📊 **Marks & Results** — internal marks, assignments, exams, grades, CGPA
+* 📅 **Timetable** — daily/weekly class schedule
+* 📢 **Announcements** — college notices and important updates
+* 📄 **Assignments** — pending/completed assignments, deadlines, submission status
+* 📥 **Study Materials** — notes, PDFs, links, lecture resources
+* 💰 **Fees** — fee status, pending amount, payment history
+* 🗓️ **Academic Calendar** — exams, holidays, events, deadlines
+
+### Useful Student Features
+
+* 🔔 **Notifications Center**
+* 📩 **Messages / Faculty Communication**
+* 🏫 **Events & Clubs**
+* 📜 **Certificates & Documents**
+* 🚌 **Transport Information**
+* 🍽️ **Hostel/Canteen Information**
+* 🆘 **Support / Help Desk**
+* 🔍 **Global Search**
+* 🌙 **Dark/Light Mode**
+* ⚙️ **Settings & Profile Management**
+
+### Dashboard
+
+The main dashboard could show:
+
+```text
+Welcome, Student 👋
+
+┌────────────┐ ┌────────────┐ ┌────────────┐
+│ Attendance  │ │   CGPA     │ │ Pending    │
+│   86%       │ │   8.4      │ │ Assignments│
+└────────────┘ └────────────┘ └────────────┘
+
+Today's Classes
+08:30  Web Development
+10:30  Mathematics
+01:30  Database Systems
+
+Upcoming
+• Assignment submission
+• Internal examination
+• College event
+
+Recent Announcements
+• Semester exam schedule released
+• Holiday notice
+```
+
+### For a more advanced ERP
+
+Add **role-based dashboards**:
+
+* **Student**
+* **Faculty**
+* **Admin**
+
+And features such as **attendance management, marks entry, student records, fee management, reports, and admin analytics**.
+
+If you're using this as the basis for your **HTML + CSS + JS project**, I can also turn these into a single optimized prompt telling the AI to **upgrade your existing ERP without changing its core HTML structure**.
